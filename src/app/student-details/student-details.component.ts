@@ -9,10 +9,14 @@ import { Students } from '../classes/students';
 export class StudentDetailsComponent implements OnInit {
 
   @Input() selectedStudent?: Students;
-  
+
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  removeDetails = (): void => {
+    this.selectedStudent = undefined;
+
+  }
 }

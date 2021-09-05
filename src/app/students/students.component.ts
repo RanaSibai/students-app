@@ -26,4 +26,5 @@ export class StudentsComponent implements OnInit {
   getDetails(student: Students): void {
     this.selectedStudent = student;
   }
+
 }

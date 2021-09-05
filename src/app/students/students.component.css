@@ -1,6 +1,5 @@
 th{
     text-align: left;
-    background-color: pink;
     text-transform: uppercase;
     border: solid 1px black;
     padding: 10px;
@@ -22,7 +21,7 @@ tfoot td {
 }
 
 .highlight {
-    background-color: #ffff93;
+    background-color: #fff3cd;
     font-weight: bold;
     color: black;
 }
@@ -32,4 +31,8 @@ tbody tr {
 tbody tr:hover{
     background-color: #eee;
     font-weight: bold;
+}
+
+.colWidth {
+    width: 0;
 }

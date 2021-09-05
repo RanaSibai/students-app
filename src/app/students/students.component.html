@@ -1,24 +1,34 @@
-<h1> Students/Grades List</h1>
-<table *ngIf='this.studentSrv.students.length > 0'>
-    <thead>
-        <tr>
-            <th>Name</th>
-            <th>Grade</th>
-        </tr>
-    </thead>
+<div class="container">
+    <h1> Students/Grades List</h1>
+    <div class="row">
+        <div class="col-sm-12 col-md-6">
+            <table class="table" *ngIf='this.studentSrv.students.length > 0'>
+                <thead>
+                    <tr class="bg-dark">
+                        <th class="text-light">Name</th>
+                        <th class="text-light">Grade</th>
+                    </tr>
+                </thead>
 
-    <tbody>
-        <tr *ngFor="let student of this.studentSrv.students"
-            [class.highlight]="student.grade > this.studentSrv.average && this.studentSrv.average>0"
-            (mouseover)='getDetails(student)'>
-            <td>{{student.name}}</td>
-            <td>{{student.grade}}</td>
-        </tr>
-    </tbody>
-    <tfoot>
-        <td>Average</td>
-        <td>{{this.studentSrv.average}}</td>
-    </tfoot>
-</table>
+                <tbody>
+                    <tr *ngFor="let student of this.studentSrv.students"
+                        [class.highlight]="student.grade > this.studentSrv.average && this.studentSrv.average>0"
+                        (mouseover)='getDetails(student)'>
+                        <td>{{student.name}}</td>
+                        <td>{{student.grade >= 90 ? student.grade + '&#11088;' : student.grade}} </td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr class="bg-dark">
+                        <td class="text-light">Average</td>
+                        <td class="text-light">{{this.studentSrv.average}}</td>
+                    </tr>
 
-<app-student-details [selectedStudent]="selectedStudent"></app-student-details>
+                </tfoot>
+            </table>
+        </div>
+        <div class="col-sm-12 col-md-6">
+            <app-student-details [selectedStudent]="selectedStudent"></app-student-details>
+        </div>
+    </div>
+</div>

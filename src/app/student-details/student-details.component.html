@@ -1,23 +1,24 @@
-<div *ngIf="selectedStudent" class="student-details">
-    <h2>{{selectedStudent.name | uppercase}} Details</h2>
-    <ul>
-        <li>
-            Name: {{selectedStudent.name}}
+<div *ngIf="selectedStudent" class="card shadow">
+    <div class="card-body">
+        <h3 class="card-title"><i class="bi bi-person-square"></i> {{selectedStudent.name | uppercase}} Details</h3>
+        <h6 class="card-subtitle"><i class="bi bi-envelope-open-fill"></i> Email: <a
+                href="mailto:{{selectedStudent.email}}">{{selectedStudent.email}}</a></h6>
+
+    </div>
+    <ul class="list-group list-group-flush">
+        <li class="list-group-item">
+            <p class="card-text ps-3"><i class="bi bi-phone"></i> <b> Phone:</b> <a
+                    href="tel:{{selectedStudent.phone}}">{{selectedStudent.phone}}</a></p>
         </li>
-        <li>
-            Email: {{selectedStudent.email}}
+        <li class="list-group-item">
+            <p class="card-text ps-3"><i class="bi bi-emoji-smile"></i> <b> Age:</b> {{selectedStudent.age}}</p>
         </li>
-        <li>
-            Phone: {{selectedStudent.phone}}
+        <li class="list-group-item">
+            <p class="card-text ps-3"><i class="bi bi-gender-ambiguous"></i> <b> Gender:</b> {{selectedStudent.gender}}
+            </p>
         </li>
-        <li>
-            Age: {{selectedStudent.age}}
-        </li>
-        <li>
-            Gender: {{selectedStudent.gender}}
-        </li>
-        <li>
-            Grade: {{selectedStudent.grade}}
+        <li class="list-group-item">
+            <p class="card-text ps-3"><i class="bi bi-card-checklist"></i> <b> Grade:</b> {{selectedStudent.grade}}</p>
         </li>
     </ul>
 </div>
