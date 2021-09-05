@@ -1,0 +1,8 @@
+.student-details{
+    position: fixed;
+    top: 5px;
+    right: 50px;
+    border: solid 1px black;
+    padding: 0 10px;
+    border-radius: 5px;
+}

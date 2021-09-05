@@ -1,0 +1,24 @@
+<h1> Students/Grades List</h1>
+<table *ngIf='this.studentSrv.students.length > 0'>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Grade</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let student of this.studentSrv.students"
+            [class.highlight]="student.grade > this.studentSrv.average && this.studentSrv.average>0"
+            (mouseover)='getDetails(student)'>
+            <td>{{student.name}}</td>
+            <td>{{student.grade}}</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <td>Average</td>
+        <td>{{this.studentSrv.average}}</td>
+    </tfoot>
+</table>
+
+<app-student-details [selectedStudent]="selectedStudent"></app-student-details>

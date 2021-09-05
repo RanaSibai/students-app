@@ -1,0 +1,35 @@
+th{
+    text-align: left;
+    background-color: pink;
+    text-transform: uppercase;
+    border: solid 1px black;
+    padding: 10px;
+}
+
+table{
+    border: solid 1px black;
+    border-spacing: 0;
+}
+
+td {
+    border: solid 1px black;
+    padding: 8px;
+}
+
+tfoot td {
+    font-weight: bold;
+    color: rgb(156, 25, 25);
+}
+
+.highlight {
+    background-color: #ffff93;
+    font-weight: bold;
+    color: black;
+}
+tbody tr {
+    cursor: pointer;
+}
+tbody tr:hover{
+    background-color: #eee;
+    font-weight: bold;
+}
