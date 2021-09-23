@@ -22,9 +22,9 @@ export class StudentsComponent implements OnInit {
     this.studentSrv.getStudents();
   }
 
-
   getDetails(student: Students): void {
     this.selectedStudent = student;
   }
+
 
 }

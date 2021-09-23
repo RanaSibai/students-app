@@ -1,4 +1,5 @@
 export class Students {
+    id: string;
     name: string;
     grade: number;
     email: string;
@@ -6,7 +7,8 @@ export class Students {
     phone: string;
     gender: string;
 
-    constructor(n: string, g: number, e: string, a: number, ph: string, s: string){
+    constructor(id: string, n: string, g: number, e: string, a: number, ph: string, s: string) {
+        this.id = id;
         this.name = n;
         this.grade = g;
         this.email = e;
@@ -16,4 +18,3 @@ export class Students {
     }
 }
 
- 

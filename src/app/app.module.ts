@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { StudentsComponent } from './students/students.component';
 import { StudentDetailsComponent } from './student-details/student-details.component';
 import { StudentsService } from './services/students.service';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { StudentsService } from './services/students.service';
     StudentDetailsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AppRoutingModule
   ],
   providers: [
     StudentsService],

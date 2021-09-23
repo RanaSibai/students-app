@@ -9,6 +9,7 @@ export class StudentsService {
 
   students: Students[] = [];
   average: number = 0;
+  selectedStudent?: Students;
 
   constructor() { }
 
@@ -18,7 +19,7 @@ export class StudentsService {
       .then(json => {
         let sum = 0;
         for (let i = 0; i < json.length; i++) {
-          const student = new Students(json[i].name, json[i].grade, json[i].email, json[i].age, json[i].phone, json[i].gender);
+          const student = new Students(json[i]._id, json[i].name, json[i].grade, json[i].email, json[i].age, json[i].phone, json[i].gender);
           this.students.push(student);
 
           sum += student.grade;
