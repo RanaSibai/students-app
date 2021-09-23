@@ -24,7 +24,7 @@
                 </li>
                 <li class="list-group-item">
                     <p class="card-text ps-3"><i class="bi bi-card-checklist"></i> <b> Grade:</b>
-                        {{selectedStudent.grade}}
+                        {{selectedStudent.grade >= 90 ? selectedStudent.grade + '&#11088;' : selectedStudent.grade}}
                     </p>
                 </li>
             </ul>
